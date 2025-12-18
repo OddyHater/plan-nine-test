@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Roboto Flex';
+
+  --color-light-black: #1B1D22;
+  --color-gray: #6C7286;
+  --color-light-gray: #A7ADC5;
+
+  --color-background: #F2F3F7;
+  --color-alert-red: #FF5053;
+  --color-alert-red-10: rgba(255, 59, 48, 0.1);
+  --color-brand-blue: #505CFF;
+  --color-brand-blue-30: rgba(80, 92, 255, 0.3);
+  --color-elements-gray-bg: #E3E5ED;
+
+  --content-width: 640px;
+}
+
+body {
+  @apply font-display;
+  @apply bg-background;
+  font-style: normal;
+
+  font-optical-sizing: auto;
+
+  /* https://fonts.google.com/specimen/Roboto+Flex/about */
+  font-variation-settings:
+    "slnt" 0,
+    "GRAD" 0,
+    "XOPQ" 107,
+    "YOPQ" 107,
+    "XTRA" 468,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712,
+    "wdth" 70;
+}
+

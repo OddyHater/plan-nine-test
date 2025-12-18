@@ -20,3 +20,7 @@ export const maskPhone = (phone: string) => {
 
   return `+7 ********${phone.slice(-2)}`;
 };
+
+export const isPhoneValid = (value: string) => {
+  return /^\+7 \d{3} \d{3} \d{2} \d{2}$/.test(value);
+};

@@ -8,3 +8,7 @@ export const maskCard = (card: string) => {
 
   return `**** **** **** ${card.slice(-4)}`;
 };
+
+export const isCardValid = (value: string) => {
+  return /^\d{4} \d{4} \d{4} \d{4}$/.test(value);
+};

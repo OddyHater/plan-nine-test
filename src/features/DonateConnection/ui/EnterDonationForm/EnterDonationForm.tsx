@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-import { formatCard, formatPhone } from '@/shared/lib';
+import { formatCard, formatPhone, isCardValid, isPhoneValid } from '@/shared/lib';
 import { Button, FieldLabel, MaskedInput, Typography } from '@/shared/ui';
 
 interface Props {
@@ -14,7 +14,7 @@ export const EnterDonationForm = ({ onSubmit, setData }: Props) => {
   const [phone, setPhone] = useState('+7');
   const [card, setCard] = useState('');
 
-  const isValid = phone.replace(/\D/g, '').length === 11 && card.replace(/\D/g, '').length === 16;
+  const isFormValid = isPhoneValid(phone) && isCardValid(card);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,6 +39,7 @@ export const EnterDonationForm = ({ onSubmit, setData }: Props) => {
             onChange={setPhone}
             format={formatPhone}
             placeholder="+7 ___ ___ __ __"
+            isValid={isPhoneValid}
           />
 
           <Typography as="p" variant="caption" color="description" className="mt-[10px]">
@@ -50,10 +51,10 @@ export const EnterDonationForm = ({ onSubmit, setData }: Props) => {
         <div>
           <FieldLabel tooltip="Данные карты хранятся у банка">2. Банковская карта</FieldLabel>
 
-          <MaskedInput value={card} onChange={setCard} format={formatCard} />
+          <MaskedInput isValid={isCardValid} value={card} onChange={setCard} format={formatCard} />
 
           <Button
-            disabled={!isValid}
+            disabled={!isFormValid}
             className="w-[155px] h-[40px] rounded-lg my-[10px]"
             type={'submit'}
           >

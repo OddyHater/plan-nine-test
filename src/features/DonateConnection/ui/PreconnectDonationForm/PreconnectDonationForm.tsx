@@ -95,7 +95,12 @@ export const PreconnectDonationForm = ({ onSubmit }: Props) => {
         <label className="flex items-start gap-3 max-w-xl cursor-pointer self-start">
           <Checkbox checked={accepted} onCheckedChange={(value) => setAccepted(Boolean(value))} />
 
-          <Typography as="span" variant="caption" className={'leading-[1.3] max-w-[250px]'}>
+          <Typography
+            onClick={() => setAccepted(!accepted)}
+            as="span"
+            variant="caption"
+            className={'leading-[1.3] max-w-[250px] select-none'}
+          >
             Я соглашаюсь с Условиями использования и Пользовательским соглашением
           </Typography>
         </label>

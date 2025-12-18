@@ -1,3 +1,3 @@
 export * from './TransactionHistory';
 export * from './types';
-export * from './mock'
+export * from './mock';

@@ -1,16 +1,11 @@
-import { ButtonHTMLAttributes } from 'react';
-import { twMerge } from "tailwind-merge";
+import type { ButtonHTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
 }
 
-export const Button = ({
-  className,
-  fullWidth,
-  disabled,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ className, fullWidth, disabled, ...props }: ButtonProps) => {
   return (
     <button
       disabled={disabled}

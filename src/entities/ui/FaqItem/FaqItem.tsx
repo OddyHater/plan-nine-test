@@ -1,6 +1,7 @@
-import React, {JSX} from 'react';
-import { Tooltip } from "@/shared/ui";
-import Image from "next/image";
+import type { JSX } from 'react';
+import React from 'react';
+import { Tooltip } from '@/shared/ui';
+import Image from 'next/image';
 
 interface Props {
   icon: string;
@@ -14,7 +15,7 @@ export const FaqItem = ({ icon, content, tooltipText }: Props) => {
       <div className={'flex items-center justify-center p-[5px] bg-white rounded-md'}>
         <Image src={icon} alt={''} width={13.5} height={13.5} />
       </div>
-      { content }
+      {content}
       <Tooltip content={tooltipText} />
     </div>
   );

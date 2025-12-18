@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { PageHeader, TransactionHistory, DonateConnection } from "@/widgets/ui";
-import { useState } from "react";
+import { PageHeader, TransactionHistory, DonateConnection } from '@/widgets/ui';
+import { useState } from 'react';
 
 export default function Home() {
-  const [currentStatus, setCurrentStatus] = useState<'preconnect' | 'enter' | 'active'>('preconnect');
+  const [currentStatus, setCurrentStatus] = useState<'preconnect' | 'enter' | 'active'>('active');
 
   return (
     <main className={'px-[40px] pt-[104px] pb-[113px]'}>

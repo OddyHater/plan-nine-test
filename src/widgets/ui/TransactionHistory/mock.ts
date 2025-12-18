@@ -1,5 +1,4 @@
-import {ITransactionItem} from "@/entities/ui";
-
+import type { ITransactionItem } from '@/entities/ui';
 
 export const transactionsMock: ITransactionItem[] = [
   {
@@ -57,5 +56,5 @@ export const transactionsMock: ITransactionItem[] = [
     currency: 'RUB',
     description: 'Оплата подписки',
     date: 1744482840,
-  }
-]
+  },
+];

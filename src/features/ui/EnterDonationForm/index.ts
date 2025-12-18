@@ -1,1 +1,1 @@
-export * from './EnterDonationForm'
+export * from './EnterDonationForm';

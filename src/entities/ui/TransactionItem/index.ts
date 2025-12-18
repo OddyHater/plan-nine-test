@@ -1,2 +1,2 @@
-export * from './TransactionItem'
-export * from './types'
+export * from './TransactionItem';
+export * from './types';

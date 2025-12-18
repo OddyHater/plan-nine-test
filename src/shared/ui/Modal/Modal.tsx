@@ -2,9 +2,9 @@
 
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import Image from "next/image";
+import Image from 'next/image';
 
-import { Typography } from "@/shared/ui";
+import { Typography } from '@/shared/ui';
 import CloseIcon from '@/shared/assets/icons/close-icon.svg';
 
 type ModalProps = {
@@ -15,14 +15,7 @@ type ModalProps = {
   children?: React.ReactNode;
 };
 
-export const Modal = ({
-  isOpen,
-  onClose,
-  title,
-  description,
-  children,
-}: ModalProps) => {
-
+export const Modal = ({ isOpen, onClose, title, description, children }: ModalProps) => {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -43,10 +36,7 @@ export const Modal = ({
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div
-        className="absolute inset-0 bg-black/50"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
       <div className="relative z-10 w-[360px] rounded-2xl bg-white p-6 shadow-xl">
         <button
@@ -64,8 +54,13 @@ export const Modal = ({
         )}
 
         {description && (
-          <Typography as={'p'} variant={'caption'} className={'text-center mb-[16px]'} color={'secondary'} weight={'regular'}>
-
+          <Typography
+            as={'p'}
+            variant={'caption'}
+            className={'text-center mb-[16px]'}
+            color={'secondary'}
+            weight={'regular'}
+          >
             {description}
           </Typography>
         )}

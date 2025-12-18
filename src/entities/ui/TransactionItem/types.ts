@@ -1,4 +1,4 @@
-import { Currency } from "@/shared/lib/utils/getCurrencySymbol";
+import type { Currency } from '@/shared/lib/utils/getCurrencySymbol';
 
 export interface ITransactionItem {
   id: number;

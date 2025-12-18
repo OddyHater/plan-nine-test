@@ -1,2 +1,2 @@
-export * from './TransactionItem'
-export * from './FaqItem'
+export * from './TransactionItem';
+export * from './FaqItem';

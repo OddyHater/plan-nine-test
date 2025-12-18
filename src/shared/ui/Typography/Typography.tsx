@@ -1,11 +1,11 @@
-import { ElementType } from 'react';
-import { clsx } from "clsx";
-import {
+import type { ElementType } from 'react';
+import type {
   TypographyColor,
   TypographyProps,
   TypographyVariant,
   TypographyWeight,
 } from './types';
+import { twMerge } from 'tailwind-merge';
 
 const variantClasses: Record<TypographyVariant, string> = {
   h1: 'text-[40px] leading-[1.05]',
@@ -42,7 +42,7 @@ export function Typography<T extends ElementType = 'p'>({
 
   return (
     <Component
-      className={clsx(
+      className={twMerge(
         variantClasses[variant],
         weightClasses[weight],
         colorClasses[color],

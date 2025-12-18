@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
-import { Button, Checkbox, Typography } from "@/shared/ui";
-import { FaqItem } from "@/entities/ui";
+import { Button, Checkbox, Typography } from '@/shared/ui';
+import { FaqItem } from '@/entities/ui';
 
 import QuestionMarkIcon from '@/shared/assets/icons/сard-holder-icon.svg';
 import HandHeartIcon from '@/shared/assets/icons/hand-heart-icon.svg';
@@ -17,16 +17,27 @@ export const PreconnectDonationForm = ({ onSubmit }: Props) => {
 
   return (
     <div className={'flex flex-col items-center'}>
-      <Typography as={'p'} variant={'h3'} weight={'semibold'} className={'text-center mb-2'} >
-        Активируйте прием донатов и любой пользователь платформы сможет отправить Вам пожертвование буквально в 1 клик!
+      <Typography as={'p'} variant={'h3'} weight={'semibold'} className={'text-center mb-2'}>
+        Активируйте прием донатов и любой пользователь платформы сможет отправить Вам пожертвование
+        буквально в 1 клик!
       </Typography>
-      <div className='flex flex-col gap-3 max-w-[370px] mb-6'>
+      <div className="flex flex-col gap-3 max-w-[370px] mb-6">
         <FaqItem
           icon={QuestionMarkIcon}
           content={
             <div>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>Прием денег на </Typography>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'} weight={'semibold'}>любую карту РФ банка</Typography>
+              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>
+                Прием денег на{' '}
+              </Typography>
+              <Typography
+                className={'inline'}
+                as={'p'}
+                variant={'body-sm'}
+                color={'secondary'}
+                weight={'semibold'}
+              >
+                любую карту РФ банка
+              </Typography>
             </div>
           }
           tooltipText={'Реально на любую'}
@@ -35,8 +46,18 @@ export const PreconnectDonationForm = ({ onSubmit }: Props) => {
           icon={HandHeartIcon}
           content={
             <div>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>Пожертвования </Typography>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'} weight={'semibold'}>не облагаются налогами</Typography>
+              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>
+                Пожертвования{' '}
+              </Typography>
+              <Typography
+                className={'inline'}
+                as={'p'}
+                variant={'body-sm'}
+                color={'secondary'}
+                weight={'semibold'}
+              >
+                не облагаются налогами
+              </Typography>
             </div>
           }
           tooltipText={'Это правда'}
@@ -45,8 +66,18 @@ export const PreconnectDonationForm = ({ onSubmit }: Props) => {
           icon={ChecksIcon}
           content={
             <div>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>Мгновенные </Typography>
-              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'} weight={'semibold'}>зачисления</Typography>
+              <Typography className={'inline'} as={'p'} variant={'body-sm'} color={'secondary'}>
+                Мгновенные{' '}
+              </Typography>
+              <Typography
+                className={'inline'}
+                as={'p'}
+                variant={'body-sm'}
+                color={'secondary'}
+                weight={'semibold'}
+              >
+                зачисления
+              </Typography>
             </div>
           }
           tooltipText={'А что тут может быть непонятно? Реально мгновенно'}
@@ -62,10 +93,7 @@ export const PreconnectDonationForm = ({ onSubmit }: Props) => {
         </Button>
 
         <label className="flex items-start gap-3 max-w-xl cursor-pointer self-start">
-          <Checkbox
-            checked={accepted}
-            onCheckedChange={(value) => setAccepted(Boolean(value))}
-          />
+          <Checkbox checked={accepted} onCheckedChange={(value) => setAccepted(Boolean(value))} />
 
           <Typography as="span" variant="caption" className={'leading-[1.3] max-w-[250px]'}>
             Я соглашаюсь с Условиями использования и Пользовательским соглашением

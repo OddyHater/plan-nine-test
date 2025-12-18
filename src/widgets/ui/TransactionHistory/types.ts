@@ -5,5 +5,4 @@ export type DateObject = {
   time: string;
 };
 
-
 export type TransactionDate = DateString | DateObject;

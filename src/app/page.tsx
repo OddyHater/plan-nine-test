@@ -4,7 +4,9 @@ import { PageHeader, TransactionHistory, DonateConnection } from '@/widgets/ui';
 import { useState } from 'react';
 
 export default function Home() {
-  const [currentStatus, setCurrentStatus] = useState<'preconnect' | 'enter' | 'active'>('active');
+  const [currentStatus, setCurrentStatus] = useState<'preconnect' | 'enter' | 'active'>(
+    'preconnect',
+  );
 
   return (
     <main className={'px-[40px] pt-[104px] pb-[113px]'}>

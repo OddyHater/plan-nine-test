@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+
 import { Tab, Typography } from '@/shared/ui';
+
 import { mockTabs } from './mock';
 
 interface Props {
@@ -22,6 +24,7 @@ export const PageHeader = ({ title }: Props) => {
             key={tab.name}
             tabName={tab.name}
             isActive={currentTab.name === tab.name}
+            disable={tab.disable}
             onClick={() => {
               setCurrentTab(tab);
             }}

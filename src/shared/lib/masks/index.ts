@@ -1,2 +1,2 @@
-export * from './phone';
 export * from './card';
+export * from './phone';

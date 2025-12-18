@@ -1,8 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Тестовое задание для plan 9
+Макет [тут](https://www.figma.com/design/CTkJvKWW12DD0EMeXOK6IV/Testovoe-Front---FROG?node-id=0-1&p=f&t=4nxpq2eGCw5FgJZ6-0)
 
-## Getting Started
-
-First, run the development server:
+## Запуск проекта
 
 ```bash
 npm run dev
@@ -14,16 +13,30 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Затем откройте [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Пометка
+Roboto Flex — это высоко настраиваемый вариативный шрифт. Его визуальный вид зависит от конкретных значений осей вариаций. Чтобы максимально точно соответствовать макету, требуется явная настройка параметров шрифта. Без точной конфигурации, использованной в дизайне, возможны незначительные визуальные отличия.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Дополнительно по [ссылке](https://fonts.google.com/specimen/Roboto+Flex/about)
 
-## Font note
-Roboto Flex is a highly customizable variable font. Its visual appearance depends on specific variation axis values. To match the design as closely as possible, the font requires an explicit configuration of its parameters. Without the exact configuration used in the design, slight visual differences are expected.
-## Deploy on Vercel
+Текущие настройки шрифта реализованы в app/global.css: 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```aiignore
+  font-variation-settings:
+    "slnt" 0,
+    "GRAD" 0,
+    "XOPQ" 107,
+    "YOPQ" 107,
+    "XTRA" 468,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712,
+    "wdth" 70;
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Деплой
+
+Деплой реализован [здесь](https://plan-nine-test.vercel.app/)

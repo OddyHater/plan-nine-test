@@ -1,4 +1,13 @@
-import type { ITransactionItem } from '@/entities/ui';
+import type { Currency } from '@/shared/lib';
+
+interface ITransactionItem {
+  id: number;
+  sum: number;
+  type: 'income' | 'outcome';
+  currency: Currency;
+  description: string;
+  date: number;
+}
 
 export const transactionsMock: ITransactionItem[] = [
   {

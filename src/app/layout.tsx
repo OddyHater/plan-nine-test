@@ -1,5 +1,8 @@
-import type { Metadata } from 'next';
 import './globals.css';
+
+import type { Metadata } from 'next';
+import React from 'react';
+
 import { robotoFlex } from '@/shared/config/fonts';
 
 export const metadata: Metadata = {

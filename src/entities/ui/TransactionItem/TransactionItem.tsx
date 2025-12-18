@@ -1,8 +1,9 @@
 import React from 'react';
-import { Typography } from '@/shared/ui';
-import type { DateObject, TransactionDate } from '@/widgets/ui';
+
 import type { Currency } from '@/shared/lib';
 import { formatAmount, getCurrencySymbol } from '@/shared/lib';
+import { Typography } from '@/shared/ui';
+import type { DateObject, TransactionDate } from '@/widgets/ui';
 
 interface Props {
   sum: number | string;

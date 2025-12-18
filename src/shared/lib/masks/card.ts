@@ -3,6 +3,8 @@ export function formatCard(value: string): string {
   return digits.replace(/(.{4})/g, '$1 ').trim();
 }
 
-export function isCardValid(value: string): boolean {
-  return value.replace(/\D/g, '').length === 16;
-}
+export const maskCard = (card: string) => {
+  if (card.length < 4) return card;
+
+  return `**** **** **** ${card.slice(-4)}`;
+};

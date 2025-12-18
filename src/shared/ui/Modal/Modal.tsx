@@ -1,11 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import Image from 'next/image';
 
-import { Typography } from '@/shared/ui';
 import CloseIcon from '@/shared/assets/icons/close-icon.svg';
+import { Typography } from '@/shared/ui';
 
 type ModalProps = {
   isOpen: boolean;

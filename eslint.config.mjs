@@ -1,10 +1,9 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
-
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default defineConfig([
   ...nextVitals,
@@ -14,12 +13,16 @@ export default defineConfig([
   {
     plugins: {
       prettier: prettierPlugin,
+      'simple-import-sort': simpleImportSort,
     },
 
     rules: {
       // JS / TS
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
+
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
 
       // TypeScript
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],

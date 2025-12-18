@@ -15,6 +15,8 @@ export function formatPhone(value: string): string {
   return `+7 ${parts.join(' ')}`.trim();
 }
 
-export function isPhoneValid(value: string): boolean {
-  return value.replace(/\D/g, '').length === 11;
-}
+export const maskPhone = (phone: string) => {
+  if (phone.length < 11) return phone;
+
+  return `+7 ********${phone.slice(-2)}`;
+};

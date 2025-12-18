@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Button, Checkbox, Typography } from '@/shared/ui';
-import { FaqItem } from '@/entities/ui';
 
-import QuestionMarkIcon from '@/shared/assets/icons/сard-holder-icon.svg';
-import HandHeartIcon from '@/shared/assets/icons/hand-heart-icon.svg';
+import { FaqItem } from '@/entities/ui';
 import ChecksIcon from '@/shared/assets/icons/checks-icon.svg';
+import HandHeartIcon from '@/shared/assets/icons/hand-heart-icon.svg';
+import QuestionMarkIcon from '@/shared/assets/icons/сard-holder-icon.svg';
+import { Button, Checkbox, Typography } from '@/shared/ui';
 
 interface Props {
   onSubmit: () => void;

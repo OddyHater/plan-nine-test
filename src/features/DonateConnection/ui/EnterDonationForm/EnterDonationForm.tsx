@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Button, FieldLabel, Typography, MaskedInput } from '@/shared/ui';
+
 import { formatCard, formatPhone } from '@/shared/lib';
+import { Button, FieldLabel, MaskedInput, Typography } from '@/shared/ui';
 
 interface Props {
   onSubmit: () => void;

@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import type { JSX } from 'react';
 import React from 'react';
+
 import { Tooltip } from '@/shared/ui';
-import Image from 'next/image';
 
 interface Props {
   icon: string;

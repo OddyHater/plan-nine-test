@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
-import { Button, FieldLabel, Typography, Modal, Icon } from '@/shared/ui';
+
 import EditIcon from '@/shared/assets/icons/pencil-icon.svg';
 import DeleteIcon from '@/shared/assets/icons/trash-icon.svg';
+import { maskCard, maskPhone } from '@/shared/lib';
+import { Button, FieldLabel, Icon, Modal, Typography } from '@/shared/ui';
 
 interface Props {
   phone: string;
@@ -12,18 +16,6 @@ interface Props {
 
 export const ActiveDonationForm = ({ card, phone, onStepBack, onDecline }: Props) => {
   const [isOpen, setIsOpen] = React.useState(false);
-
-  const maskPhone = (phone: string) => {
-    if (phone.length < 11) return phone;
-
-    return `+7 ********${phone.slice(-2)}`;
-  };
-
-  const maskCard = (card: string) => {
-    if (card.length < 4) return card;
-
-    return `**** **** **** ${card.slice(-4)}`;
-  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -91,7 +83,7 @@ export const ActiveDonationForm = ({ card, phone, onStepBack, onDecline }: Props
         <div className={'flex flex-col items-center gap-4 mt-6'}>
           <Button
             disabled={false}
-            className="w-[155px] h-[40px] rounded-lg bg-alert-red-10 text-alert-red self-center"
+            className="w-[155px] h-[40px] rounded-lg bg-alert-red-10 text-alert-red self-center hover:bg-red-200"
             type={'submit'}
           >
             Отключить донаты
@@ -109,13 +101,17 @@ export const ActiveDonationForm = ({ card, phone, onStepBack, onDecline }: Props
       >
         <div className={'flex gap-4 items-center justify-center'}>
           <Button
-            className={'bg-[#F2F3F7] text-light-black px-[12px] py-[15px] rounded-[12px]'}
+            className={
+              'bg-[#F2F3F7] text-light-black px-[12px] py-[15px] rounded-[12px] hover:bg-gray-200'
+            }
             onClick={() => setIsOpen(!isOpen)}
           >
             Отменить
           </Button>
           <Button
-            className={'bg-[#F2F3F7] text-alert-red px-[12px] py-[15px] rounded-[12px]'}
+            className={
+              'bg-[#F2F3F7] text-alert-red px-[12px] py-[15px] rounded-[12px] hover:bg-red-200'
+            }
             onClick={onDecline}
           >
             Отключить донаты

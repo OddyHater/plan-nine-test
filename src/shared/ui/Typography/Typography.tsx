@@ -1,11 +1,12 @@
 import type { ElementType } from 'react';
+import { twMerge } from 'tailwind-merge';
+
 import type {
   TypographyColor,
   TypographyProps,
   TypographyVariant,
   TypographyWeight,
 } from './types';
-import { twMerge } from 'tailwind-merge';
 
 const variantClasses: Record<TypographyVariant, string> = {
   h1: 'text-[40px] leading-[1.05]',

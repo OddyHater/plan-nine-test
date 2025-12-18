@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import CheckIcon from '@/shared/assets/icons/check-icon.svg';
 import { twMerge } from 'tailwind-merge';
+
+import CheckIcon from '@/shared/assets/icons/check-icon.svg';
 
 interface Props {
   checked: boolean;

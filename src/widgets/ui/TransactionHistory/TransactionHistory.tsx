@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { transactionsMock } from './mock';
 import { TransactionItem } from '@/entities/ui';
 import { formatAmount, formatDate, formatTime } from '@/shared/lib';
 import { Typography } from '@/shared/ui';
+
+import { transactionsMock } from './mock';
 
 interface Props {
   status: 'preconnect' | 'enter' | 'active';

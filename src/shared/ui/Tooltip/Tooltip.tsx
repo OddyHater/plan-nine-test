@@ -1,10 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
-import QuestionMarkIcon from '@/shared/assets/icons/question-mark-icon.svg';
 import { twMerge } from 'tailwind-merge';
+
+import QuestionMarkIcon from '@/shared/assets/icons/question-mark-icon.svg';
 
 interface TooltipProps {
   content: ReactNode;
